@@ -1,0 +1,105 @@
+.competitions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 60px;
+    width: 90%;
+}
+
+.competitions .head {
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.competitions .head::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.competitions .head a {
+    color: var(--main-color);
+}
+
+.competitions .head p {
+    font-weight: bold;
+    color: #252e29;
+}
+
+.competitions .head {
+    font-weight: normal;
+    color: black;
+}
+
+.competitions .competitions-con {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.competitions .competitions-con .box {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: white;
+    border: var(--main-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.competitions .competitions-con .box:hover {
+    background-color: #f1f1f1;
+}
+
+.competitions .competitions-con .box:hover a {
+    color: var(--main-color);
+}
+
+.competitions .competitions-con .box::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    width: calc(90% - 10px);
+    height: 3px;
+    background: linear-gradient(to right, var(--first-color-gradient), var(--second-color-gradient));
+}
+
+.competitions .competitions-con .box a {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media(max-width: 1024px) {
+    .competitions .competitions-con .box img {
+        width: 40px;
+        margin-bottom: 12px;
+    }
+
+    .competitions .competitions-con .box a {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .competitions {
+        margin: 20px 10px;
+    }
+
+    .competitions .competitions-con {
+        grid-template-columns: repeat(6, minmax(50px, 1fr));
+    }
+}

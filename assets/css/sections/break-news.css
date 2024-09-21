@@ -1,0 +1,44 @@
+.break-news {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--main-color);
+}
+
+.break-news .title {
+    color: white;
+    background-color: #006c2b;
+    width: 90px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.break-news a {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.break-news .close {
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+    cursor: pointer;
+    background-color: #0d141b;
+}
+
+.break-news img {
+    width: 24px;
+}
+

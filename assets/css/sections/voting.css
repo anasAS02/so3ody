@@ -1,0 +1,158 @@
+.container .voting-con .header {
+    position: relative;
+}
+
+.container .voting-con .header::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 3px;
+    background: linear-gradient(to right, var(--first-color-gradient), var(--second-color-gradient));
+}
+
+.container .additional-sections .voting-con .qestion::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 3px;
+    background: linear-gradient(to right, var(--first-color-gradient), var(--second-color-gradient));
+}
+
+.container .additional-sections .voting-con {
+    margin: 20px 20px 20px 60px;
+    padding: 20px 10px;
+    border-radius: 12px;
+    border: var(--main-border);
+    background-color: white;
+    position: sticky;
+    top: 0;    
+}
+
+.container .additional-sections .voting-con .header p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.container .additional-sections .voting-con .img {
+    margin-top: 12px;
+}
+
+.container .additional-sections .voting-con .img img {
+    width: 240px;
+    border-radius: 6px;
+}
+
+.container .additional-sections .voting-con .qestion {
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.container .additional-sections .voting-con .result {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container .additional-sections .voting-con .result .head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .additional-sections .voting-con .result .option-1 .head {
+    color: #222;
+}
+
+.container .additional-sections .voting-con .result .option-2 .head {
+    color: var(--main-color);
+}
+
+.container .additional-sections .voting-con .result .option-1 .bar {
+    opacity: 0.4;
+}
+
+.container .additional-sections .voting-con .result .option-1 .bar,
+.container .additional-sections .voting-con .result .option-2 .bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #eee;
+    position: relative;
+}
+
+.container .additional-sections .voting-con .result .option-1 .bar span,
+.container .additional-sections .voting-con .result .option-2 .bar span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--main-color);
+}
+
+.container .additional-sections .voting-con .result .option-1 .bar span {
+    width: 46.9%;
+}
+
+.container .additional-sections .voting-con .result .option-2 .bar span {
+    width: 53.1%;
+}
+
+.container .additional-sections .voting-con .options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    align-items: center;
+}
+
+.container .additional-sections .voting-con .options span {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    border: var(--main-border);
+    transition: 0.3s;
+}
+
+.container .additional-sections .voting-con .options span:hover {
+    color: white;
+    background: linear-gradient(to right, var(--first-color-gradient), var(--second-color-gradient));
+}
+
+.container .additional-sections .voting-con button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-right: auto;
+    margin-top: 12px;
+    text-align: left;
+}
+
+@media(max-width: 1024px) {
+    .container .additional-sections .voting-con {
+        margin: 20px 60px;
+    }
+
+    .container .additional-sections .voting-con .img img {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .container .additional-sections .voting-con {
+        margin: 20px 10px;
+    }
+}

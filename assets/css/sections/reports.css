@@ -1,0 +1,137 @@
+.reports {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 60px;
+    width: 90%;
+}
+
+.reports .head {
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reports .head::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.reports .head .reports-category {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reports .head p  {
+    font-weight: bold;
+    color: #252e29;
+}
+
+.reports .head p:last-of-type {
+    font-weight: normal;
+    color: var(--main-color);
+}
+
+.reports .reports-con {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.reports .reports-con .box {
+    padding: 7px;
+    background-color: white;
+    border: var(--main-border);
+    border-radius: 12px;
+}
+
+.reports .reports-con .box .img img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.reports .reports-con .box .img{
+    position: relative;
+}
+
+.reports .reports-con .box .img::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--first-color-gradient), var(--second-color-gradient));
+}
+
+.reports .reports-con .box a {
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.reports .reports-con .box:hover a {
+    color: var(--main-color);
+}
+
+.reports .reports-con .box .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reports .reports-con .box .info span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 12px;
+}
+
+.reports .reports-con .box .info img {
+    width: 24px;
+}
+
+.reports .reports-con .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reports .reports-con .box .info {
+    margin-top: auto;
+}
+
+@media(max-width: 1024px) {
+    .reports .reports-con {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .reports .reports-con .box {
+        gap: 12px;
+    }
+}
+
+@media(max-width: 767px) {
+    .reports {
+        margin: 20px 10px;
+    }
+
+    .reports .reports-con .box a {
+        font-size: 10px;
+    }
+
+    .reports .info span {
+        font-size: 10px !important;
+    }
+}

@@ -1,0 +1,23 @@
+.popular-teams {
+    background-color: white;
+    padding: 10px;
+    margin: 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    border: var(--main-border);
+    border-radius: 8px;
+}
+
+.popular-teams a {
+    transition: 0.3s;
+}
+
+.popular-teams a:hover {
+    transform: translateY(-4px);
+}
+
+@media(max-width: 1024px) {
+    .popular-teams {
+        display: none;
+    }
+}
